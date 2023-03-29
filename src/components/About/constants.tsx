@@ -22,8 +22,8 @@ export const MAIN_CARDS = [
   },
   {
     to: '/nfts',
-    title: 'Trade NFTs',
-    description: 'Buy and sell NFTs across marketplaces to find more listings at better prices.',
+    title: 'Mint NFTs',
+    description: 'Mint BNB Tiger NFTs to participate our eco system',
     cta: 'Explore NFTs',
     darkBackgroundImgSrc: nftCardImgSrc,
     lightBackgroundImgSrc: nftCardImgSrc,
@@ -39,16 +39,16 @@ const StyledCardLogo = styled.img`
 `
 
 export const MORE_CARDS = [
-  {
-    to: 'https://support.uniswap.org/hc/en-us/articles/11306574799117-How-to-use-Moon-Pay-on-the-Uniswap-web-app-',
-    external: true,
-    title: 'Buy crypto',
-    description: 'Buy crypto with your credit card or bank account at the best rates.',
-    lightIcon: <DollarSign color={lightTheme.textTertiary} size={48} />,
-    darkIcon: <StyledCardLogo src={darkDollarImgSrc} alt="Earn" />,
-    cta: 'Buy now',
-    elementName: InterfaceElementName.ABOUT_PAGE_BUY_CRYPTO_CARD,
-  },
+  // {
+  //   to: 'https://support.uniswap.org/hc/en-us/articles/11306574799117-How-to-use-Moon-Pay-on-the-Uniswap-web-app-',
+  //   external: true,
+  //   title: 'Buy crypto',
+  //   description: 'Buy crypto with your credit card or bank account at the best rates.',
+  //   lightIcon: <DollarSign color={lightTheme.textTertiary} size={48} />,
+  //   darkIcon: <StyledCardLogo src={darkDollarImgSrc} alt="Earn" />,
+  //   cta: 'Buy now',
+  //   elementName: InterfaceElementName.ABOUT_PAGE_BUY_CRYPTO_CARD,
+  // },
   {
     to: '/pools',
     title: 'Earn',

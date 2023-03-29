@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import { BREAKPOINTS, ExternalLink, StyledRouterLink } from 'theme'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
 
-import { DiscordIcon, GithubIcon, TwitterIcon } from './Icons'
+import { DiscordIcon, GithubIcon, TwitterIcon, TelegramIcon } from './Icons'
 import darkUnicornImgSrc from './images/unicornEmbossDark.png'
 import lightUnicornImgSrc from './images/unicornEmbossLight.png'
 
@@ -128,10 +128,10 @@ const LogoSectionContent = () => {
           </SocialLink>
         </TraceEvent>
         <SocialLink href="https://github.com/Uniswap" target="_blank" rel="noopener noreferrer">
-          <GithubIcon size={32} />
+          <TelegramIcon width={32} height={32} />
         </SocialLink>
       </SocialLinks>
-      <Copyright>© {new Date().getFullYear()} Uniswap Labs</Copyright>
+      <Copyright>© {new Date().getFullYear()} BNB Tiger</Copyright>
     </>
   )
 }
@@ -147,11 +147,11 @@ export const AboutFooter = () => {
         <LinkGroup>
           <LinkGroupTitle>App</LinkGroupTitle>
           <TextLink to="/swap">Swap</TextLink>
-          <TextLink to="/tokens">Tokens</TextLink>
-          <TextLink to="/nfts">NFTs</TextLink>
+          {/* <TextLink to="/tokens">Tokens</TextLink> */}
+          {/* <TextLink to="/nfts">NFTs</TextLink> */}
           <TextLink to="/pools">Pools</TextLink>
         </LinkGroup>
-        <LinkGroup>
+        {/* <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
           <ExternalTextLink href="https://uniswap.org/community">Community</ExternalTextLink>
           <ExternalTextLink href="https://uniswap.org/governance">Governance</ExternalTextLink>
@@ -196,7 +196,7 @@ export const AboutFooter = () => {
           >
             <ExternalTextLink href="https://support.uniswap.org/hc/en-us">Help Center</ExternalTextLink>
           </TraceEvent>
-        </LinkGroup>
+        </LinkGroup> */}
       </FooterLinks>
 
       <LogoSectionBottom>

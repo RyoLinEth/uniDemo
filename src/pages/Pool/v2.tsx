@@ -178,7 +178,7 @@ export default function Pool() {
             <CardNoise />
           </VoteCard>
 
-          {unsupportedV2Network ? (
+          {/* {unsupportedV2Network ? (
             <AutoColumn gap="lg" justify="center">
               <AutoColumn gap="md" style={{ width: '100%' }}>
                 <Layer2Prompt>
@@ -188,7 +188,7 @@ export default function Pool() {
                 </Layer2Prompt>
               </AutoColumn>
             </AutoColumn>
-          ) : (
+          ) : ( */}
             <AutoColumn gap="lg" justify="center">
               <AutoColumn gap="md" style={{ width: '100%' }}>
                 <TitleRow style={{ marginTop: '1rem' }} padding="0">
@@ -280,7 +280,8 @@ export default function Pool() {
                 )}
               </AutoColumn>
             </AutoColumn>
-          )}
+          {/* )
+          } */}
         </PageWrapper>
         <SwitchLocaleLink />
       </>

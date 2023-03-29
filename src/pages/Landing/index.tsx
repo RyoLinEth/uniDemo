@@ -392,9 +392,13 @@ export default function Landing() {
                 />
               ))}
             </CardGrid>
-            <CardGrid cols={3}>
+            <CardGrid cols={2}>
               {MORE_CARDS.map(({ darkIcon, lightIcon, ...card }) => (
-                <Card {...card} icon={isDarkMode ? darkIcon : lightIcon} key={card.title} type={CardType.Secondary} />
+                <Card 
+                {...card} 
+                icon={isDarkMode ? darkIcon : lightIcon} 
+                key={card.title} 
+                type={CardType.Secondary} />
               ))}
             </CardGrid>
             <ProtocolBanner />

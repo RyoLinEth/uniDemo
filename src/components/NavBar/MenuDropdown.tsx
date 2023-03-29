@@ -10,8 +10,10 @@ import {
   EllipsisIcon,
   GithubIconMenu,
   GovernanceIcon,
+  TelegramIcon,
   PoolIcon,
   TwitterIconMenu,
+  FarmIcon,
 } from 'nft/components/icons'
 import { body, bodySmall } from 'nft/css/common.css'
 import { themeVars } from 'nft/css/sprinkles.css'
@@ -149,10 +151,10 @@ export const MenuDropdown = () => {
                 </Box>
                 <PrimaryMenuRow to="/vote" close={toggleOpen}>
                   <Icon>
-                    <GovernanceIcon width={24} height={24} color={theme.textSecondary} />
+                    <FarmIcon width={24} height={24} color={theme.textSecondary} />
                   </Icon>
                   <PrimaryMenuRow.Text>
-                    <Trans>Vote in governance</Trans>
+                    <Trans>LP Farm</Trans>
                   </PrimaryMenuRow.Text>
                 </PrimaryMenuRow>
                 <PrimaryMenuRow href="https://info.uniswap.org/#/">
@@ -160,12 +162,12 @@ export const MenuDropdown = () => {
                     <BarChartIcon width={24} height={24} color={theme.textSecondary} />
                   </Icon>
                   <PrimaryMenuRow.Text>
-                    <Trans>View more analytics</Trans>
+                    <Trans>Token Pool</Trans>
                   </PrimaryMenuRow.Text>
                 </PrimaryMenuRow>
               </Column>
               <Separator />
-              <Box
+              {/* <Box
                 display="flex"
                 flexDirection={{ sm: 'row', md: 'column' }}
                 flexWrap="wrap"
@@ -194,16 +196,16 @@ export const MenuDropdown = () => {
                     <Trans>Feature Flags</Trans>
                   </SecondaryLinkedText>
                 )}
-              </Box>
+              </Box> */}
               <IconRow>
-                <Icon href="https://discord.com/invite/FCfyBSbCU5">
+                {/* <Icon href="https://discord.com/invite/FCfyBSbCU5">
                   <DiscordIconMenu
                     className={styles.hover}
                     width={24}
                     height={24}
                     color={themeVars.colors.textSecondary}
                   />
-                </Icon>
+                </Icon> */}
                 <Icon href="https://twitter.com/Uniswap">
                   <TwitterIconMenu
                     className={styles.hover}
@@ -213,7 +215,7 @@ export const MenuDropdown = () => {
                   />
                 </Icon>
                 <Icon href="https://github.com/Uniswap">
-                  <GithubIconMenu
+                  <TelegramIcon
                     className={styles.hover}
                     width={24}
                     height={24}
