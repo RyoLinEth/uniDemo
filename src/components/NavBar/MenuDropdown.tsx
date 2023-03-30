@@ -4,26 +4,13 @@ import { PrivacyPolicyModal } from 'components/PrivacyPolicy'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Box } from 'nft/components/Box'
 import { Column, Row } from 'nft/components/Flex'
-import {
-  BarChartIcon,
-  DiscordIconMenu,
-  EllipsisIcon,
-  GithubIconMenu,
-  GovernanceIcon,
-  TelegramIcon,
-  PoolIcon,
-  TwitterIconMenu,
-  FarmIcon,
-} from 'nft/components/icons'
-import { body, bodySmall } from 'nft/css/common.css'
+import { BarChartIcon, EllipsisIcon, FarmIcon, PoolIcon, TelegramIcon, TwitterIconMenu } from 'nft/components/icons'
+import { body } from 'nft/css/common.css'
 import { themeVars } from 'nft/css/sprinkles.css'
 import { ReactNode, useReducer, useRef } from 'react'
 import { NavLink, NavLinkProps } from 'react-router-dom'
-import { useToggleModal } from 'state/application/hooks'
 import styled, { useTheme } from 'styled-components/macro'
-import { isDevelopmentEnv, isStagingEnv } from 'utils/env'
 
-import { ApplicationModal } from '../../state/application/reducer'
 import * as styles from './MenuDropdown.css'
 import { NavDropdown } from './NavDropdown'
 import { NavIcon } from './NavIcon'
@@ -65,29 +52,29 @@ const PrimaryMenuRowText = ({ children }: { children: ReactNode }) => {
 
 PrimaryMenuRow.Text = PrimaryMenuRowText
 
-const SecondaryLinkedText = ({
-  href,
-  onClick,
-  children,
-}: {
-  href?: string
-  onClick?: () => void
-  children: ReactNode
-}) => {
-  return (
-    <Box
-      as={href ? 'a' : 'div'}
-      href={href ?? undefined}
-      target={href ? '_blank' : undefined}
-      rel={href ? 'noopener noreferrer' : undefined}
-      className={`${styles.SecondaryText} ${bodySmall}`}
-      onClick={onClick}
-      cursor="pointer"
-    >
-      {children}
-    </Box>
-  )
-}
+// const SecondaryLinkedText = ({
+//   href,
+//   onClick,
+//   children,
+// }: {
+//   href?: string
+//   onClick?: () => void
+//   children: ReactNode
+// }) => {
+//   return (
+//     <Box
+//       as={href ? 'a' : 'div'}
+//       href={href ?? undefined}
+//       target={href ? '_blank' : undefined}
+//       rel={href ? 'noopener noreferrer' : undefined}
+//       className={`${styles.SecondaryText} ${bodySmall}`}
+//       onClick={onClick}
+//       cursor="pointer"
+//     >
+//       {children}
+//     </Box>
+//   )
+// }
 
 const Separator = () => {
   return <Box className={styles.Separator} />
@@ -123,8 +110,8 @@ const Icon = ({ href, children }: { href?: string; children: ReactNode }) => {
 export const MenuDropdown = () => {
   const theme = useTheme()
   const [isOpen, toggleOpen] = useReducer((s) => !s, false)
-  const togglePrivacyPolicy = useToggleModal(ApplicationModal.PRIVACY_POLICY)
-  const openFeatureFlagsModal = useToggleModal(ApplicationModal.FEATURE_FLAGS)
+  // const togglePrivacyPolicy = useToggleModal(ApplicationModal.PRIVACY_POLICY)
+  // const openFeatureFlagsModal = useToggleModal(ApplicationModal.FEATURE_FLAGS)
   const ref = useRef<HTMLDivElement>(null)
   useOnClickOutside(ref, isOpen ? toggleOpen : undefined)
 

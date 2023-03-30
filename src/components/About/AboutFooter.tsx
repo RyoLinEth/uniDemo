@@ -1,10 +1,10 @@
 import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, SharedEventName } from '@uniswap/analytics-events'
 import styled from 'styled-components/macro'
-import { BREAKPOINTS, ExternalLink, StyledRouterLink } from 'theme'
+import { BREAKPOINTS, StyledRouterLink } from 'theme'
 import { useIsDarkMode } from 'theme/components/ThemeToggle'
 
-import { DiscordIcon, GithubIcon, TwitterIcon, TelegramIcon } from './Icons'
+import { DiscordIcon, TelegramIcon, TwitterIcon } from './Icons'
 import darkUnicornImgSrc from './images/unicornEmbossDark.png'
 import lightUnicornImgSrc from './images/unicornEmbossLight.png'
 
@@ -90,11 +90,11 @@ const LinkGroupTitle = styled.span`
   font-weight: 700;
 `
 
-const ExternalTextLink = styled(ExternalLink)`
-  font-size: 16px;
-  line-height: 20px;
-  color: ${({ theme }) => theme.textSecondary};
-`
+// const ExternalTextLink = styled(ExternalLink)`
+//   font-size: 16px;
+//   line-height: 20px;
+//   color: ${({ theme }) => theme.textSecondary};
+// `
 
 const TextLink = styled(StyledRouterLink)`
   font-size: 16px;

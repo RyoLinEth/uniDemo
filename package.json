@@ -22,6 +22,7 @@
     "serve": "serve build -l 3000",
     "deduplicate": "yarn-deduplicate --strategy=highest",
     "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint --fix .",
     "test": "craco test --coverage",
     "test:size": "node scripts/test-size.js",
     "cypress:open": "cypress open --browser chrome --e2e",

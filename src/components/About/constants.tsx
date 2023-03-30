@@ -1,11 +1,10 @@
 import { InterfaceElementName } from '@uniswap/analytics-events'
-import { DollarSign, Terminal } from 'react-feather'
+import { Terminal } from 'react-feather'
 import styled from 'styled-components/macro'
 import { lightTheme } from 'theme/colors'
 
 import darkArrowImgSrc from './images/aboutArrowDark.png'
 import lightArrowImgSrc from './images/aboutArrowLight.png'
-import darkDollarImgSrc from './images/aboutDollarDark.png'
 import darkTerminalImgSrc from './images/aboutTerminalDark.png'
 import nftCardImgSrc from './images/nftCard.png'
 import swapCardImgSrc from './images/swapCard.png'

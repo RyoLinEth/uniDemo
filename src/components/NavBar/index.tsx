@@ -6,15 +6,12 @@ import { useMGTMMicrositeEnabled } from 'featureFlags/flags/mgtm'
 import { chainIdToBackendName } from 'graphql/data/util'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { useIsPoolsPage } from 'hooks/useIsPoolsPage'
-import { useAtomValue } from 'jotai/utils'
 import { Box } from 'nft/components/Box'
 import { Row } from 'nft/components/Flex'
-import { UniIcon } from 'nft/components/icons'
 import { useProfilePageState } from 'nft/hooks'
 import { ProfilePageStateType } from 'nft/types'
 import { ReactNode } from 'react'
-import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
-import { shouldDisableNFTRoutesAtom } from 'state/application/atoms'
+import { NavLink, NavLinkProps, useLocation } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 import { Bag } from './Bag'
@@ -58,16 +55,15 @@ export const PageTabs = () => {
   const { chainId: connectedChainId } = useWeb3React()
   const chainName = chainIdToBackendName(connectedChainId)
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const isPoolActive = useIsPoolsPage()
-  const isNftPage = useIsNftPage()
+  // const isNftPage = useIsNftPage()
   const micrositeEnabled = useMGTMMicrositeEnabled()
 
-  const shouldDisableNFTRoutes = useAtomValue(shouldDisableNFTRoutesAtom)
+  // const shouldDisableNFTRoutes = useAtomValue(shouldDisableNFTRoutesAtom)
 
   return (
     <>
-
       <MenuItem href="/?intro=true" isActive={pathname.startsWith('/')}>
         <Trans>Home</Trans>
       </MenuItem>
@@ -109,7 +105,7 @@ export const PageTabs = () => {
 const Navbar = ({ blur }: { blur: boolean }) => {
   const isNftPage = useIsNftPage()
   const sellPageState = useProfilePageState((state) => state.state)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
     <>
